@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Calculator app</title>
+  </head>
+  <body id="body" class="theme1">
+    <header>
+      <h1>Calc</h1>
+      <div id="choiceTheme">
+        <p id="textTheme">THEME</p>
+        <div id="divToggle">
+          <div id="numbers">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          
+          <div onclick=AltTheme() id="toggle">
+            <button id="altToggle"></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="showNumbers">
+        <p id="screen"></p>
+      </section>
+      <section id="keypad">
+        <div id="keypad-buttons1">
+          <button onclick=writeScreen(7) >7</button>
+          <button onclick=writeScreen(8)>8</button>
+          <button onclick=writeScreen(9)>9</button>
+          <button class="key-button" onclick=Del()>DEL</button>
+          <button onclick=writeScreen(4)>4</button>
+          <button onclick=writeScreen(5)>5</button>
+          <button onclick=writeScreen(6)>6</button>
+          <button onclick="writeScreen('+')">+</button>
+          <button onclick=writeScreen(1)>1</button>
+          <button onclick=writeScreen(2)>2</button>
+          <button onclick=writeScreen(3)>3</button>
+          <button onclick="writeScreen('-')">-</button>
+          <button onclick="writeScreen('.')">.</button>
+          <button onclick=writeScreen(0)>0</button>
+          <button onclick="writeScreen('/')">\</button>
+          <button onclick="writeScreen('x')">x</button>
+        </div>
+        <div id="keypad-buttons2">
+          <button class="key-button" onclick=clearScreen()>RESET</button>
+          <button id="result" onclick=calc()>=</button>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
